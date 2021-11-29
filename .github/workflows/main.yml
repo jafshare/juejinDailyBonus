@@ -22,4 +22,6 @@ jobs:
       - run: yarn
       - run: yarn build
       - name: Run script
-        run: npx cross-env cookies=${{secrets.JUE_JIN_COOKIES}} node dist/index.js
+        run: npx cross-env cookies=$COOKIE node dist/index.js
+        env:
+          COOKIE: ${{secrets.JUE_JIN_COOKIES}}
