@@ -21,6 +21,6 @@ jobs:
       - run: pwd
       - run: ls
       - run: yarn
-      - run: npm run build
+      - run: yarn build
       - name: Run script
-        run: npm run run
+        run: yarn start
