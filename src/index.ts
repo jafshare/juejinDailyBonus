@@ -57,7 +57,11 @@ const getTodayCheckStatus = async () => {
     method: "get",
     headers: { Cookie: cookie },
   });
-  console.log(data)
+  console.log({
+    url: baseUrl + apiUrl.getTodayStatus,
+    method: "get",
+    headers: { Cookie: cookie },
+  }, data)
   if (data.err_no) {
     await sendEmailFromQQ("今日掘金签到查询：失败", JSON.stringify(data));
   }
