@@ -32,6 +32,7 @@ const config = {
 // 签到
 const checkIn = async () => {
   let { error, isCheck } = await getTodayCheckStatus();
+  console.log(error)
   if (error) return console.log("查询签到失败");
   if (isCheck) return console.log("今日已参与签到");
   const { cookie, baseUrl, apiUrl } = config;
