@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cross-env": "^7.0.3"
+    "axios": "^0.24.0",
+    "cross-env": "^7.0.3",
+    "nodemailer": "^6.7.2"
   },
   "devDependencies": {
     "@types/node": "^16.11.10",
