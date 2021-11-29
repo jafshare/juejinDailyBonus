@@ -10,7 +10,9 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  },
   "devDependencies": {
     "@types/node": "^16.11.10",
     "tslib": "^2.3.1",

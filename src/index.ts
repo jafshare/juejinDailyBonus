@@ -1,1 +1,1 @@
-console.log('你好啊')
+console.log('你好啊',process.env.cookies)
