@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    "module": "commonjs",
     "target": "esnext",
     "sourceMap": true,
     "resolveJsonModule": true,
@@ -15,6 +15,7 @@
     "experimentalDecorators": true,
     "strict": true,
     "esModuleInterop": true,
+    "outDir": "dist",
     "baseUrl": "./",
     "paths": {
       "@/*": [

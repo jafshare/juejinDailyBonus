@@ -1,0 +1,18 @@
+name: JueJin AutoClock Action
+
+on:
+  push:
+    # 仅main分支提交触发
+    branches: [main]
+
+jobs:
+  # 构建ID
+  build:
+    # 说明
+    name: build
+    # 构建运行的系统环境，GitHub提供
+    runs-on: ubuntu-latest
+    # 构建步骤
+    steps:
+      - name: Run a script
+        run: echo Hello World
