@@ -32,7 +32,6 @@ const config = {
 // 签到
 const checkIn = async () => {
   let { error, isCheck } = await getTodayCheckStatus();
-  console.log(error)
   if (error) return console.log("查询签到失败");
   if (isCheck) return console.log("今日已参与签到");
   const { cookie, baseUrl, apiUrl } = config;
@@ -58,6 +57,7 @@ const getTodayCheckStatus = async () => {
     method: "get",
     headers: { Cookie: cookie },
   });
+  console.log(data)
   if (data.err_no) {
     await sendEmailFromQQ("今日掘金签到查询：失败", JSON.stringify(data));
   }
