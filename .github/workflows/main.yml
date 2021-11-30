@@ -5,8 +5,8 @@ on:
     # 仅main分支提交触发
     branches: [main]
   schedule:
-  # 定时任务,()
-    - cron: '10 8 * * *'
+  # 定时任务,每天9：11触发(由于服务器是UTC时间，需要减去8小时)
+    - cron: '11 1 * * *'
 
 jobs:
   # 构建ID
