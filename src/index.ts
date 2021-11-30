@@ -26,7 +26,6 @@ const config = {
     },
   },
 };
-console.log('cookies:',process.env.cookies)
 /*---------------掘金-----------------*/
 
 // 签到
@@ -57,11 +56,6 @@ const getTodayCheckStatus = async () => {
     method: "get",
     headers: { Cookie: cookie },
   });
-  console.log({
-    url: baseUrl + apiUrl.getTodayStatus,
-    method: "get",
-    headers: { Cookie: cookie },
-  }, data)
   if (data.err_no) {
     await sendEmailFromQQ("今日掘金签到查询：失败", JSON.stringify(data));
   }
