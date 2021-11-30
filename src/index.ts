@@ -26,7 +26,7 @@ const config = {
     },
   },
 };
-
+console.log('cookies:',process.env.cookies)
 /*---------------掘金-----------------*/
 
 // 签到
