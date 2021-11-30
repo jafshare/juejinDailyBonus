@@ -5,8 +5,8 @@ on:
     # 仅main分支提交触发
     branches: [main]
   schedule:
-  # 定时任务
-    - cron: '05 16 * * *'
+  # 定时任务,()
+    - cron: '10 8 * * *'
 
 jobs:
   # 构建ID
