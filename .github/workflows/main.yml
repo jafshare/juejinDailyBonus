@@ -4,6 +4,9 @@ on:
   push:
     # 仅main分支提交触发
     branches: [main]
+  schedule:
+  # 定时任务
+    - cron: '50 14 * * *'
 
 jobs:
   # 构建ID
