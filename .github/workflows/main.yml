@@ -6,7 +6,7 @@ on:
     branches: [main]
   schedule:
   # 定时任务
-    - cron: '50 14 * * *'
+    - cron: '20 15 * * *'
 
 jobs:
   # 构建ID
