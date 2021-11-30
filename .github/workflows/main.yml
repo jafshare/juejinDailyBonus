@@ -1,9 +1,12 @@
 name: JueJin AutoClock Action
 
 on:
+  push:
+    # 仅main分支提交触发
+    branches: [main]
   schedule:
   # 定时任务
-    - cron: '00 16 * * *'
+    - cron: '05 16 * * *'
 
 jobs:
   # 构建ID
@@ -21,6 +24,7 @@ jobs:
           node-version: "14"
       - run: yarn
       - run: yarn build
+      - run: date
       - name: Run script
         run: npx cross-env cookies='$COOKIE' receiver='$RECEIVER' sender='$SENDER' node dist/index.js
         env:
