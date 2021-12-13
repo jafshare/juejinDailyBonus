@@ -26,7 +26,7 @@ jobs:
       - run: yarn build
       - run: date
       - name: Run script
-        run: npx cross-env cookies='$COOKIE' receiver='$RECEIVER' sender='$SENDER' node dist/index.js
+        run: npx cross-env cookies='$COOKIE' receiver='$RECEIVER' sender='$SENDER' pass='$MAIL_PASS' node dist/index.js
         env:
           COOKIE: ${{secrets.JUE_JIN_COOKIES}}
           SENDER: ${{secrets.SENDER}}

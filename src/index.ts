@@ -22,7 +22,7 @@ const config = {
       user: process.env.sender,
       from: process.env.sender,
       to: process.env.receiver,
-      pass: "",
+      pass: process.env.pass,
     },
   },
 };
@@ -100,6 +100,8 @@ const sendEmailFromQQ = async (subject: string, html: string) => {
   if (!cfg || !cfg.user || !cfg.pass) return;
   const transporter = nodeMailer.createTransport({
     service: "qq",
+    port: 465, // SMTP 端口
+    secureConnection: true, // 使用了 SSL
     auth: { user: cfg.user, pass: cfg.pass },
   });
   transporter.sendMail(
