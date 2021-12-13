@@ -31,3 +31,4 @@ jobs:
           COOKIE: ${{secrets.JUE_JIN_COOKIES}}
           SENDER: ${{secrets.SENDER}}
           RECEIVER: ${{secrets.RECEIVER}}
+          MAIL_PASS: ${{secrets.MAIL_PASS}}
