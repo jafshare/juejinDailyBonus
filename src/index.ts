@@ -44,7 +44,7 @@ const checkIn = async () => {
     await sendEmailFromQQ("今日掘金签到：失败", JSON.stringify(data));
   } else {
     console.log(`签到成功！当前积分：${data.data.sum_point}`);
-    await sendEmailFromQQ("今日掘金签到：成功", JSON.stringify(data));
+    await sendEmailFromQQ("今日掘金签到：成功", `<b>总积分:</b><span>${data.data.sum_point}</span><br/><b>今日增长积分:</b><span>${data.data.incr_point}</span>`);
   }
 };
 
@@ -100,8 +100,6 @@ const sendEmailFromQQ = async (subject: string, html: string) => {
   if (!cfg || !cfg.user || !cfg.pass) return;
   const transporter = nodeMailer.createTransport({
     service: "qq",
-    port: 465, // SMTP 端口
-    secureConnection: true, // 使用了 SSL
     auth: { user: cfg.user, pass: cfg.pass },
   });
   transporter.sendMail(
